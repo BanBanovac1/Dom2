@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="styles/main.css">
+        <script type="text/javascript" src="scripts/script.js"></script>
+    </head>
+    <body>
+        <div class="search-box">
+            <input type="text" name="searchBox" placeholder="Type product name to search" onclick="changeIcon()">
+                <i class="material-icons search-box-icon">search</i>
+            </input>
+        </div>
+
+        <div class="product-card">
+            <div class="product-card-imageCnt">
+                <img class="product-card-image" src="img/clothes.png" alt="product image">
+            </div>
+            <div class="product-card-info">
+                <div class="product-card-titleCategory">
+                    <div class="product-card-title">Urban Coco</div>
+                    <div class="product-card-category">FOR WOMEN</div>
+                </div>
+                <div class="product-card-priceCnt">
+                    <div class="product-card-oldPrice"><span class="dollar-sign">$</span>53.99</div>
+                    <div class="product-card-currentPrice"><span class="dollar-sign">$</span>45.00</div>       
+                </div>
+            </div>
+            <a href="#" class="product-card-button">ADD TO CART</a>
+        </div>
+
+        <div class="color-select-box" onclick="showList()">
+            <div class="color-select-header" >SELECT COLOR</div>
+            <i class="material-icons color-select-icon">keyboard_arrow_down</i>
+            <ul class="color-select-list">
+                <li class="color-select-item clearfix">
+                    <div class="color-select-item-name">Black</div>
+                    <div class="color-select-item-quantity">12</div>
+                    <div class="color-select-circle" />
+                </li>
+                <li class="color-select-item clearfix">
+                    <div class="color-select-item-name">Blue</div>
+                    <div class="color-select-item-quantity">12</div>
+                    <div class="color-select-circle" />
+                </li>
+               <li class="color-select-item clearfix">
+                    <div class="color-select-item-name">Red</div>
+                    <div class="color-select-item-quantity">12</div>
+                    <div class="color-select-circle" />
+                </li>
+                <li class="color-select-item clearfix">
+                    <div class="color-select-item-name">Orange</div>
+                    <div class="color-select-item-quantity">12</div>
+                    <div class="color-select-circle" />
+                </li>
+            </ul>
+        </div>
+
+        <div class="range-slider">
+            <div class="range-slider-header">
+                <div class="range-slider-title">SELECT PRICE</div>
+                <i class="material-icons range-slider-icon">keyboard_arrow_down</i>
+            </div>
+            <input class="range-slider-range-min" type="range" value="429" min="0" max="2000">
+            <input class="range-slider-range-max" type="range" value="1318" min="0" max="2000">
+            <div class="range-info">
+                <div class="range-info-min">
+                    <div class="range-info-min-title">MIN</div>
+                    <div class="range-info-min-box">
+                        <div class="range-info-min-value">$ 429</div>
+                    </div>
+                </div>
+                <div class="range-info-max">
+                    <div class="range-info-max-title">MAX</div>
+                    <div class="range-info-max-box">
+                        <div class="range-info-max-value">$ 1318</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </body>
+</html>
