@@ -1,21 +1,3 @@
-function getVals() {
-    // Get slider values
-    var parent = this.parentNode;
-    var slides = parent.getElementsByTagName("input");
-    var slide1 = parseFloat(slides[0].value);
-    var slide2 = parseFloat(slides[1].value);
-    // Neither slider will clip the other, so make sure we determine which is larger
-    if (slide1 > slide2) {
-        var tmp = slide2;
-        slide2 = slide1;
-        slide1 = tmp;
-    }
-    var displayElementMax = parent.getElementsByClassName("range-info-max-value")[0];
-    var displayElementMin = parent.getElementsByClassName("range-info-min-value")[0];
-    displayElementMax.innerHTML = "$ " + slide2;
-    displayElementMin.innerHTML = "$ " + slide1;
-}
-
 window.onload = function () {
     // Initialize Sliders
     var sliderSections = document.getElementsByClassName("range-slider");
@@ -32,9 +14,9 @@ window.onload = function () {
 }
 
 function changeIcon() {
-    var magnifyIcon = document.getElementsByClassName('search-box-icon');
+	var magnifyIcon = document.getElementsByClassName('search-box-icon');
     magnifyIcon[0].style.color = 'black';
-    document.addEventListener("click", function (event) {
+	document.addEventListener("click", function (event) {
         if (event.target.name != "searchBox") {
             magnifyIcon[0].style.color = "rgb(203,203,203)";
         }
@@ -58,4 +40,22 @@ function showList() {
             icon[0].innerHTML = 'keyboard_arrow_down';
         }
     });
+}
+
+function getVals() {
+    // Get slider values
+    var parent = this.parentNode;
+    var slides = parent.getElementsByTagName("input");
+    var slide1 = parseFloat(slides[0].value);
+    var slide2 = parseFloat(slides[1].value);
+    // Neither slider will clip the other, so make sure we determine which is larger
+    if (slide1 > slide2) {
+        var tmp = slide2;
+        slide2 = slide1;
+        slide1 = tmp;
+    }
+    var displayElementMax = parent.getElementsByClassName("range-info-max-value")[0];
+    var displayElementMin = parent.getElementsByClassName("range-info-min-value")[0];
+    displayElementMax.innerHTML = "$ " + slide2;
+    displayElementMin.innerHTML = "$ " + slide1;
 }

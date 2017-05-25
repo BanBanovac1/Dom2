@@ -1,3 +1,4 @@
+body{padding-bottom: 20px;}
 /*SEARCH BOX*/
 .search-box{
     position: relative;
@@ -51,9 +52,9 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 
 .search-box-icon {
     position: absolute;
-    font-size: 18px;
+    font-size: 12px;
     color: rgb(203,203,203);
-    top: 14px;
+    top: 16px;
     right: 18px;
 }
 
@@ -143,6 +144,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     margin-top: 7px;
     margin-left: 22px; 
     margin-right: 22px;
+	border-radius: 1px;
 }
 
 span.dollar-sign {
@@ -249,8 +251,8 @@ span.dollar-sign {
 /*RANGE SLIDER*/
 .range-slider {
     position: relative;
-    margin-top: 200px;
-    margin-left: 100px;
+    margin-top: 10px;
+    margin-left: 400px;
     width: 222px;
     height: 159px;
      -webkit-box-shadow: 5px 5px 9px 0px rgba(0,0,0,0.17);
